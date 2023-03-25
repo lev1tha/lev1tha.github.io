@@ -1,0 +1,960 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .13s;
+    text-decoration: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+.suptitle-header {
+    text-align: center;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    background: #3A5041;
+}
+
+header .logo {
+    width: 23%;
+}
+
+header{
+    position: relative;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .right a{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 33px;
+    /* identical to box height, or 165% */
+    
+    color: #BEBFBE;
+}
+
+header .left a{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 33px;
+    /* identical to box height, or 165% */
+    
+    color: #BEBFBE;
+}
+
+header a:hover{
+    color: #00264B;
+}
+
+.none {
+    display: none;
+    position: absolute;
+}
+
+.right{
+    display: flex;
+    column-gap: 10px;
+    /* margin-left: 50px; */
+}
+
+
+.left{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+
+/* Main logo text */
+
+.container-img{
+    background-image: url(./imghomepage/632Black-Sectional_8\ 1.png);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.container-text-{
+    padding: 212px 100px 0 100px;
+}
+
+.container-text- h1{
+    margin-top: 214px;
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 130%;
+
+    color: #FFFFFF;
+}
+
+.container-text- p{
+    margin-top: 18px;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 168%;
+    /* or 168% */
+
+    color: #FFFFFF;
+}
+
+.button-logo button{
+    margin: 55px 0 400px 120px;
+    padding: 34px 56px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 32px;
+    /* identical to box height */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    color: #fff;
+    background: #B58269;
+    border: none;
+}
+
+.media-screen{
+    display: none;
+}
+
+/* Section */
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    padding: 0 70px;
+}
+
+.container-adress{
+    margin:0 0  45px 0 ;
+}
+
+section .container-adress a{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+
+    /* Pale Slate */
+    color: #BEBFBE;
+}
+
+
+
+section .container-adress a span{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+
+    color: #272727;
+}
+
+.mini-poster{
+    padding: 40px 70px;
+}
+
+.container-logo{
+    padding: 120px 0;
+    background-image: url(../CollectionPage/img/604Green-Sec8B_4\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* logo */
+
+.container-logo h1{
+    text-align: center;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 82px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.container-logo h4{
+    text-align: center;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 32px;
+    /* identical to box height */
+    letter-spacing: 0.265em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+/* adress / choise */
+
+section header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section header h1{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 55px;
+    line-height: 69px;
+    display: flex;
+    align-items: center;
+
+    color: #272727;
+}
+
+section header p{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+
+    /* Black */
+    color: #000000;
+}
+
+/* find category */
+
+.container-category{
+    border-bottom: 2px solid #A3A3A3;
+}
+
+aside h5{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+    
+    color: #272727;
+}
+
+.choise-sofa {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.choise-sofa input{
+    padding: 12px 20px;
+    font-size: 24px;
+    color: #000000;
+}
+
+.choise-find-category .category{
+    display: flex;
+    justify-content: space-between;
+}
+
+.choise-find-category .category p{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+
+    margin-bottom: 30px;
+
+    color: #888887;
+}
+
+section aside article {
+    display: flex;
+    column-gap: 24px;
+}
+
+#qwe{
+    transform:scale(1.6);
+    opacity:0.9;
+    cursor:pointer;
+}
+
+article{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+article p{
+    font-size: 20px;
+}
+
+article a{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    color: #888887;
+    /* identical to box height */
+
+    margin-bottom: 17px ;
+}
+
+.featured{
+    border-bottom: 2px solid #A3A3A3;
+}
+
+.featured h5{
+    margin: 20px 0 20px 0;
+
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: #272727;
+}
+
+/* Setting slider */
+
+
+
+.price-ranger{
+    position: static;
+    border-bottom: 2px solid #A3A3A3;
+}
+
+.price-ranger h5{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+    
+    color: #272727;
+}
+
+.price-ranger article{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    margin-left: 20px;
+}
+
+.clearall{
+    text-align: end;
+}
+
+.grid .box p{
+    margin: 15px 0;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+
+    /* Monsoon */
+    color: #888887;
+}
+
+.grid .price p{
+    margin: 0 0 10px 0;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #FF5B5B;
+}
+
+.big-box .box img{
+    width: 250px;
+}
+
+.grid .price span{
+    margin: 0 12px;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+
+    color: #C4C4C4;
+}
+
+/* choise */
+
+section .box-choise{
+    padding: 30px;
+    border: 1px solid #545454;
+    border-radius: 6px;
+}
+
+section .box-choise:hover{
+    transition: .4s;
+    background-color: #B58269;
+    color: #FFFFFF;
+}
+
+/* footer */
+
+
+.container-helper{
+    padding: 110px 60px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../HomePageweb/imghomepage/632Cream-Sectional_4\ 4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left-help h1{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 94px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.title-help{
+    width: 500px;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* or 128% */
+
+    color: #C1C1C1;
+}
+
+
+.suptitle-help{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 128% */
+
+    color: #FFFFFF;
+}
+
+.right-help button{
+    padding: 12px 20px ;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: #232323;
+    background: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    border: none;
+}
+
+.right-help button img{
+    width: 10%;
+}
+
+.right-help p{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+
+footer{
+    background: #232323;
+    padding: 56px 60px 120px;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-footer h4{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height */
+    letter-spacing: -0.309091px;
+
+    color: #FFFFFF;
+
+    margin: 50px 0 25px;
+}
+
+.footer-header p{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 168%;
+    /* or 168% */
+
+    color: rgba(255, 255, 255, 0.58);
+
+    width: 300px;
+    margin: 30px 0;
+}
+
+
+.help-write a{
+    display: block;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.58);
+}
+
+
+
+.product{
+    display: block;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.58);
+    margin: 10px 0;
+}
+
+
+.help{
+    display: block;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.58);
+    margin: 10px 0;
+}
+
+.container-footer input{
+    background-color: #232323;
+    border: none;
+    border-bottom: 1px solid #BEBFBE;
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.invite{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    /* or 140% */
+
+    color: #FFFFFF;
+    width: 400px;
+}
+
+@media (max-width:1200px) {
+
+
+
+    .suptitle{    
+        padding: 10px 10px;
+        text-align: center;
+        font-family: 'HK Grotesk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        /* identical to box height, or 140% */
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    
+        color: #FFFFFF;
+        background: #3A5041;}
+
+    header {
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo {
+        width: 52%;
+    }
+
+
+
+    .right{
+        display: none;
+    }
+
+    .left{
+        display: none;
+    }
+
+    .none{
+        display: block;
+        position: relative;
+    }
+
+/* Navigation with loog */
+
+    .container-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 14px;
+        align-items: center;
+    }
+
+    .container-item .container-logo-text h1{
+        font-family: 'Babylonica', cursive;
+        font-size: 74px;
+        font-weight: 400;
+    }
+
+
+    .container-media{
+        display: block;
+        color-scheme: black;
+        padding-left: 14px;
+    }
+    
+
+    .container-item nav{
+        display: none;
+    }
+
+    .container-item nav a{ 
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 165%;
+        /* identical to box height, or 165% */
+        
+        
+        color: #00264B;
+    }
+
+    .container-item-icons .search-icon-group{
+        display: none;
+    }
+
+    .container-item-icons .cart-icon-group{
+        padding-right: 14px;
+    }
+
+    .container-adress{
+        display: none;
+        position: absolute;
+
+    }
+
+    .media-screen{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 20px ;
+        border-bottom: 1px solid #888887;
+    }
+
+
+    section header p{
+        display: none;
+    }
+
+    .choise-sofa{
+        display: none;
+    }
+
+    .media-none-screen{
+        display: none;
+        position: absolute;
+    }
+
+    .flex{
+        column-gap: 0px;
+    }
+
+    .grid{
+        padding: 10px;
+    }
+
+    .grid img{
+        width: 210px;
+    }
+    
+
+    .grid .box p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        /* or 144% */
+
+        /* Monsoon */
+        color: #888887;
+    }
+
+    .grid .price p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        /* or 144% */
+
+        /* Monsoon */
+        color: #888887;
+    }
+
+    .grid .price p span{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        /* or 144% */
+
+        /* Monsoon */
+        color: #FF5B5B;
+    }
+
+    section .box-choise{
+        margin: 30px;
+    }
+
+
+    section{
+        padding: 0px 0px;
+        background-position-x: center;
+        background-position-y: center;
+    }
+
+    .container-logo{
+        padding: 40px;
+    }
+
+    .container-logo h1{
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .flex aside{
+        display: none;
+    }
+    .left-help h1 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 54px;
+        color: #FFFFFF;
+    
+        margin: 14px 0;
+        }
+    
+        .title{
+            padding: 0;
+            font-size: 33px;
+        }
+
+
+    .title-help h1{
+        font-size: 30px;
+        width: 0 auto;
+    }
+
+    .title-help{
+        width: 360px;
+        font-size: 19px;
+    }
+
+    .suptitle-help{
+        display: none;
+    }
+
+    .container-helper{
+        padding: 110px 0 30px;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .right-help button{
+        margin: 10px 0;
+        font-size: 20px;
+        border: none;
+    }
+
+    .container-footer{
+        flex-wrap: wrap;
+    }
+
+    .container-footer input{
+        background-color: #232323;
+        border: none;
+        border-bottom: 1px solid #BEBFBE;
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .invite{
+        font-family: 'HK Grotesk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 35px;
+        /* or 140% */
+    
+        color: #FFFFFF;
+        width: 300px;
+    }
+
+    .container-item{
+        flex-wrap: wrap;
+        padding: 0 12px;
+    }
+
+    .left-about .item{
+        width: 380px;
+    }
+
+    .right-about h1{
+        font-size: 28px;
+    }
+
+    .right-about p{
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+}
+
+@media (max-width:320px){
+
+    .suptitle-header {
+        font-size: 9px;
+        line-height: 16px;
+    }
+
+    .mini-poster {
+        padding: 40px 14px;
+    }
+
+    .container-logo h1 {
+        font-size: 16px;
+    }
+
+    .container-logo h4 {
+        font-size: 14px;
+    }
+
+    .flex {
+        padding: 0 30px;
+    }
+
+    .none-media-grid{
+        display: none;
+        position: absolute;
+    }
+
+    section .box-choise {
+        margin: 21px;
+    }
+    
+    section .box-choise {
+        padding: 16px;
+    }
+
+    .footer-header p {
+        width: 246px;
+    }
+
+    .grid{
+        padding: 0;
+    }
+
+    .title-help {
+        width: 250px;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+    .container-footer input {
+        width: 238px;
+    }
+
+    .invite {
+        width: 236px;
+    }
+}

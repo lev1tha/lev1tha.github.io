@@ -1,0 +1,729 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .13s;
+    text-decoration: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+.suptitle-header {
+    text-align: center;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    background: #3A5041;
+}
+
+header .logo {
+    width: 23%;
+}
+
+header{
+    position: relative;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .right a{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 33px;
+    /* identical to box height, or 165% */
+    
+    color: #BEBFBE;
+}
+
+header .left a{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 33px;
+    /* identical to box height, or 165% */
+    
+    color: #BEBFBE;
+}
+
+header a:hover{
+    color: #00264B;
+}
+
+.none {
+    display: none;
+    position: absolute;
+}
+
+.right{
+    display: flex;
+    column-gap: 10px;
+    /* margin-left: 50px; */
+}
+
+
+.left{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+/* Main logo text */
+
+.container-img{
+    background-image: url(./imghomepage/632Black-Sectional_8\ 1.png);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.container-text-{
+    padding: 212px 100px 0 100px;
+}
+
+.container-text- h1{
+    margin-top: 214px;
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 130%;
+
+    color: #FFFFFF;
+}
+
+.container-text- p{
+    margin-top: 18px;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 168%;
+    /* or 168% */
+
+    color: #FFFFFF;
+}
+
+.button-logo button{
+    margin: 55px 0 400px 120px;
+    padding: 34px 56px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 32px;
+    /* identical to box height */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    color: #fff;
+    background: #B58269;
+    border: none;
+}
+
+/* header title */
+
+
+.box-heading{
+    padding-top: 70px;
+    text-align: center;
+}
+
+.box-heading .title h1{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 94px;
+    /* identical to box height */
+
+    color: #000000;
+}
+
+.box-heading p{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 43px;
+    /* identical to box height, or 172% */
+    text-align: center;
+    margin-bottom: 104px;
+}
+
+/* Box Contact info */
+
+.box-contact-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.box{   
+    display: flex;
+    column-gap: 26px;
+}
+
+.box h4{
+    margin-top: 10px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height */
+    letter-spacing: 0.265em;
+    text-transform: uppercase;
+
+    /* Black/Black-30 */
+    color: #77808B;
+}
+
+.box p{
+    margin-top: 20px;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    /* identical to box height */
+
+    /* Black/Black-70 */
+    color: #283646;
+}
+
+
+
+article button{
+    padding: 32px 52px;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 32px;
+    /* identical to box height */
+    letter-spacing: 0.265em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    background: #B58269;
+}
+
+/* Footer */
+
+.container-helper{
+    padding: 110px 60px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../HomePageweb/imghomepage/632Cream-Sectional_4\ 4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left-help h1{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 94px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.title-help{
+    width: 500px;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* or 128% */
+
+    color: #C1C1C1;
+}
+
+.suptitle-help{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 128% */
+
+    color: #FFFFFF;
+}
+
+.right-help button{
+    padding: 12px 20px ;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: #232323;
+    background: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    border: none;
+}
+
+.right-help button img{
+    width: 10%;
+}
+
+.right-help p{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+
+footer{
+    background: #232323;
+    padding: 56px 60px 120px;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-footer h4{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height */
+    letter-spacing: -0.309091px;
+
+    color: #FFFFFF;
+
+    margin: 50px 0 25px;
+}
+
+.footer-header p{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 168%;
+    /* or 168% */
+
+    color: rgba(255, 255, 255, 0.58);
+
+    width: 300px;
+    margin: 30px 0;
+}
+
+
+.help-write a{
+    display: block;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.58);
+}
+
+
+
+.product{
+    display: block;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.58);
+    margin: 10px 0;
+}
+
+
+.help{
+    display: block;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+
+    color: rgba(255, 255, 255, 0.58);
+    margin: 10px 0;
+}
+
+.container-footer input{
+    background-color: #232323;
+    border: none;
+    border-bottom: 1px solid #BEBFBE;
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.invite{
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    /* or 140% */
+
+    color: #FFFFFF;
+    width: 400px;
+}
+
+
+@media (max-width:1200px) {
+
+    .suptitle{    
+        padding: 10px 10px;
+        text-align: center;
+        font-family: 'HK Grotesk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        /* identical to box height, or 140% */
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    
+        color: #FFFFFF;
+        background: #3A5041;}
+
+    header {
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo {
+        width: 52%;
+    }
+
+
+
+    .right{
+        display: none;
+    }
+
+    .left{
+        display: none;
+    }
+
+    .none{
+        display: block;
+        position: relative;
+    }
+
+
+/* Navigation with loog */
+
+    .container-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 14px;
+        align-items: center;
+    }
+
+    .container-item .container-logo-text h1{
+        font-family: 'Babylonica', cursive;
+        font-size: 74px;
+        font-weight: 400;
+    }
+
+
+    .container-media{
+        display: block;
+        color-scheme: black;
+        padding-left: 14px;
+    }
+    
+
+    .container-item nav{
+        display: none;
+    }
+
+    .container-item nav a{ 
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 165%;
+        /* identical to box height, or 165% */
+        
+        
+        color: #00264B;
+    }
+
+    .container-item-icons .search-icon-group{
+        display: none;
+    }
+
+    .container-item-icons .cart-icon-group{
+        padding-right: 14px;
+    }
+
+
+    section img{
+        max-width: fit-content;
+        width: 100%;
+    }
+
+    .box-heading .title h1{
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 44px;
+        /* identical to box height */
+
+        color: #000000;
+    }
+
+    .box-heading .title p{
+        font-family: 'HK Grotesk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        /* or 160% */
+        text-align: center;
+
+        color: #000000;
+    }
+
+    .box-contact-info{
+        padding: 10px 20px;
+    }
+
+    .box-contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        
+    }
+
+    .box-dable-input{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 20px !important;
+    }
+
+    .box-dable-input input{
+        width: 140% !important;
+    }
+
+    .box-big-input{
+        padding: 10px 20px !important;
+    }
+
+    .box-big-input input{
+        width: 95% !important;
+    }
+
+    section article{
+        margin-bottom: 40px !important;
+    }
+
+    article button{
+        padding: 26px 42px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .left-help h1 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 54px;
+        color: #FFFFFF;
+    
+        margin: 14px 0;
+        }
+    
+        .title{
+            padding: 0;
+            font-size: 33px;
+        }
+
+
+    .title-help h1{
+        font-size: 30px;
+        width: 0 auto;
+    }
+
+    .title-help{
+        width: 360px;
+        font-size: 19px;
+    }
+
+    .suptitle-help{
+        display: none;
+    }
+
+    .container-helper{
+        padding: 110px 0 30px;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .right-help button{
+        margin: 10px 0;
+        font-size: 20px;
+        border: none;
+    }
+
+    .container-footer{
+        flex-wrap: wrap;
+    }
+
+    .container-footer input{
+        background-color: #232323;
+        border: none;
+        border-bottom: 1px solid #BEBFBE;
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .invite{
+        font-family: 'HK Grotesk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 35px;
+        /* or 140% */
+    
+        color: #FFFFFF;
+        width: 300px;
+    }
+
+    .container-item{
+        flex-wrap: wrap;
+        padding: 0 12px;
+    }
+
+    .left-about .item{
+        width: 380px;
+    }
+
+    .right-about h1{
+        font-size: 28px;
+    }
+
+    .right-about p{
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width:320px){
+    .box-heading p {
+        font-family: 'HK Grotesk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 54px;
+    }
+
+    .box-heading .title h1 {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 29px;
+    }
+
+    .suptitle-header {
+        font-size: 10px;
+        line-height: 19px;
+    }
+
+    section .box-img img {
+        max-width: fit-content;
+        width: 60%;
+    }
+
+    .box h4 {
+        font-size: 12px;
+    }
+
+    .box p {
+        font-size: 10px;
+        line-height: 0;
+    }
+    
+    article button {
+        padding: 8px 24px;
+        font-size: 15px;
+    }
+
+    .left-help h1{
+        font-size: 25px;
+    }
+
+    .title-help {
+        width: 288px;
+        font-size: 16px;
+    }
+
+    .invite {
+        font-size: 25px;
+        width: 252px;
+    }
+
+    .container-footer input {
+        width: 240px;
+        font-size: 20px;
+    }
+    
+}
