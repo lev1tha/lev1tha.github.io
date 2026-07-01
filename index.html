@@ -478,10 +478,8 @@
         }
 
         .pc-vis {
-            height: 130px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 200px;
+            padding: 18px 18px 0;
             position: relative;
             overflow: hidden;
             border-bottom: 1px solid #e8e6e1
@@ -559,8 +557,8 @@
 
         .live-dot {
             position: absolute;
-            top: 12px;
-            right: 12px;
+            top: 28px;
+            right: 28px;
             width: 6px;
             height: 6px;
             border-radius: 50%;
@@ -577,6 +575,185 @@
 
             50% {
                 opacity: .35
+            }
+        }
+
+        .pc-frame {
+            height: 100%;
+            border-radius: 9px 9px 0 0;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, .07);
+            box-shadow: 0 10px 26px rgba(30, 30, 40, .13);
+            transition: transform .4s
+        }
+
+        .pc:hover .pc-frame {
+            transform: translateY(-6px)
+        }
+
+        .pc-bar {
+            height: 22px;
+            background: #f3f1ec;
+            border-bottom: 1px solid #eceae5;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0 10px
+        }
+
+        .pc-bar span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #d6d3cd;
+            display: block
+        }
+
+        .pc-shot {
+            width: 100%;
+            height: calc(100% - 22px);
+            object-fit: cover;
+            object-position: center;
+            display: block
+        }
+
+        .pm {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(20, 20, 22, .55);
+            backdrop-filter: blur(6px)
+        }
+
+        .pm.open {
+            display: flex
+        }
+
+        .pm-box {
+            background: #f8f7f4;
+            width: 100%;
+            max-width: 860px;
+            max-height: 88vh;
+            overflow: auto;
+            border-radius: 8px;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.05fr 1fr
+        }
+
+        .pm-x {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 2;
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .5);
+            color: #fff;
+            font-size: 17px;
+            font-family: 'Nunito', sans-serif;
+            cursor: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1
+        }
+
+        .pm-shot {
+            background: #f0eeea;
+            min-height: 260px
+        }
+
+        .pm-shot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block
+        }
+
+        .pm-info {
+            padding: 30px 28px
+        }
+
+        .pm-cat {
+            font-size: 11px;
+            font-weight: 700;
+            color: #aaa;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            margin-bottom: 8px
+        }
+
+        .pm-title {
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: -.02em;
+            margin-bottom: 12px
+        }
+
+        .pm-full {
+            font-size: 13.5px;
+            line-height: 1.75;
+            color: #555;
+            margin-bottom: 16px
+        }
+
+        .pm-feat {
+            list-style: none;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px
+        }
+
+        .pm-feat li {
+            font-size: 12.5px;
+            color: #444;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.5
+        }
+
+        .pm-feat li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #bbb;
+            font-weight: 700
+        }
+
+        .pm-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 22px
+        }
+
+        .pm-open {
+            cursor: none
+        }
+
+        @media(max-width:720px) {
+            .pm-box {
+                grid-template-columns: 1fr;
+                max-height: 92vh
+            }
+
+            .pm-shot {
+                min-height: 190px;
+                max-height: 220px
+            }
+
+            .pm-info {
+                padding: 22px 20px
             }
         }
 
@@ -859,147 +1036,7 @@
             </div>
             <div class="proj-note" data-t="pr.note"></div>
         </div>
-        <div class="pgrid">
-            <div class="pc reveal">
-                <div class="pc-vis" style="background:#ede9fe">
-                    <div class="live-dot"></div>
-                    <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="100,18 128,65 156,65 134,92 142,120 100,100 58,120 66,92 44,65 72,65"
-                            fill="none" stroke="#7c3aed" stroke-width="1.5" opacity=".4" />
-                        <polygon points="100,34 116,61 138,61 122,76 128,98 100,84 72,98 78,76 62,61 84,61"
-                            fill="#7c3aed" opacity=".13" />
-                        <text x="100" y="72" text-anchor="middle" font-family="Nunito,sans-serif" font-size="10"
-                            font-weight="800" fill="#7c3aed">EXPERT</text>
-                    </svg>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-type" data-t="pb.game"></div>
-                    <div class="pc-title">Expert Game</div>
-                    <p class="pc-desc" data-t="p1.d"></p>
-                    <div class="pc-stack"><span class="ps">Game</span><span class="ps">Finance</span></div>
-                    <a href="https://expert-game.vercel.app/" class="pc-link" data-t="p.open"></a>
-                </div>
-            </div>
-            <div class="pc reveal" style="transition-delay:.08s">
-                <div class="pc-vis" style="background:#fff7ed">
-                    <div class="live-dot"></div>
-                    <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="64" y="16" width="72" height="88" rx="4" fill="none" stroke="#ea580c"
-                            stroke-width="1.5" opacity=".35" />
-                        <rect x="72" y="28" width="56" height="40" rx="2" fill="#ea580c" opacity=".08" />
-                        <rect x="76" y="33" width="11" height="11" rx="1" fill="none" stroke="#ea580c"
-                            stroke-width="1.2" opacity=".5" />
-                        <rect x="79" y="36" width="5" height="5" fill="#ea580c" opacity=".4" />
-                        <rect x="91" y="33" width="11" height="11" rx="1" fill="none" stroke="#ea580c"
-                            stroke-width="1.2" opacity=".5" />
-                        <rect x="94" y="36" width="5" height="5" fill="#ea580c" opacity=".4" />
-                        <rect x="106" y="33" width="11" height="11" rx="1" fill="none" stroke="#ea580c"
-                            stroke-width="1.2" opacity=".5" />
-                        <rect x="109" y="36" width="5" height="5" fill="#ea580c" opacity=".4" />
-                        <rect x="76" y="50" width="44" height="3" rx="1" fill="#ea580c" opacity=".18" />
-                        <rect x="76" y="57" width="32" height="3" rx="1" fill="#ea580c" opacity=".12" />
-                        <text x="100" y="100" text-anchor="middle" font-family="Nunito,sans-serif" font-size="9"
-                            font-weight="800" fill="#ea580c" opacity=".5">QR · LOVE</text>
-                    </svg>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-type" data-t="pb.qr"></div>
-                    <div class="pc-title">LoveLet</div>
-                    <p class="pc-desc" data-t="p2.d"></p>
-                    <div class="pc-stack"><span class="ps">QR</span><span class="ps">Flowers</span></div>
-                    <a href="https://up1mep-lovelet.vercel.app/admin" class="pc-link" data-t="p.open"></a>
-                </div>
-            </div>
-            <div class="pc reveal" style="transition-delay:.16s">
-                <div class="pc-vis" style="background:#f0fdf4">
-                    <div class="live-dot"></div>
-                    <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="28" y="24" width="144" height="72" rx="4" fill="none" stroke="#16a34a"
-                            stroke-width="1.5" opacity=".3" />
-                        <rect x="36" y="36" width="30" height="20" rx="2" fill="#16a34a" opacity=".1" />
-                        <rect x="72" y="36" width="24" height="9" rx="1" fill="#16a34a" opacity=".18" />
-                        <rect x="72" y="49" width="16" height="7" rx="1" fill="#16a34a" opacity=".12" />
-                        <rect x="104" y="36" width="18" height="9" rx="1" fill="#16a34a" opacity=".16" />
-                        <rect x="104" y="49" width="24" height="7" rx="1" fill="#16a34a" opacity=".1" />
-                        <rect x="36" y="66" width="96" height="2.5" rx="1" fill="#16a34a" opacity=".1" />
-                        <text x="100" y="108" text-anchor="middle" font-family="Nunito,sans-serif" font-size="9"
-                            font-weight="800" fill="#16a34a" opacity=".4">KONOQ CRM</text>
-                    </svg>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-type" data-t="pb.crm"></div>
-                    <div class="pc-title">Konoq Hostel</div>
-                    <p class="pc-desc" data-t="p3.d"></p>
-                    <div class="pc-stack"><span class="ps">CRM</span><span class="ps">TG Bot</span></div>
-                    <a href="https://konoq-hostel.com/" class="pc-link" data-t="p.open"></a>
-                </div>
-            </div>
-            <div class="pc reveal" style="transition-delay:.08s">
-                <div class="pc-vis" style="background:#fdf4ff">
-                    <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="24" y="48" width="14" height="44" rx="2" fill="#c026d3" opacity=".22" />
-                        <rect x="44" y="34" width="14" height="58" rx="2" fill="#c026d3" opacity=".32" />
-                        <rect x="64" y="22" width="14" height="70" rx="2" fill="#c026d3" opacity=".45" />
-                        <rect x="84" y="42" width="14" height="50" rx="2" fill="#c026d3" opacity=".28" />
-                        <rect x="104" y="28" width="14" height="64" rx="2" fill="#c026d3" opacity=".4" />
-                        <rect x="124" y="54" width="14" height="38" rx="2" fill="#c026d3" opacity=".2" />
-                        <rect x="144" y="38" width="14" height="54" rx="2" fill="#c026d3" opacity=".32" />
-                        <path d="M31 64 L51 52 L71 42 L91 58 L111 46 L131 70 L151 56" fill="none" stroke="#c026d3"
-                            stroke-width="1.5" stroke-dasharray="3,3" opacity=".45" />
-                    </svg>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-type" data-t="pb.dash"></div>
-                    <div class="pc-title" data-t="p4.t"></div>
-                    <p class="pc-desc" data-t="p4.d"></p>
-                    <div class="pc-stack"><span class="ps">React</span><span class="ps">TypeScript</span></div>
-                    <span class="pc-soon" data-t="p.soon"></span>
-                </div>
-            </div>
-            <div class="pc reveal" style="transition-delay:.16s">
-                <div class="pc-vis" style="background:#eff6ff">
-                    <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="52" y="18" width="96" height="64" rx="10" fill="none" stroke="#2563eb"
-                            stroke-width="1.5" opacity=".35" />
-                        <circle cx="76" cy="46" r="5" fill="#2563eb" opacity=".28" />
-                        <circle cx="100" cy="46" r="5" fill="#2563eb" opacity=".28" />
-                        <circle cx="124" cy="46" r="5" fill="#2563eb" opacity=".28" />
-                        <path d="M76 58 Q100 68 124 58" fill="none" stroke="#2563eb" stroke-width="1.5"
-                            stroke-linecap="round" opacity=".35" />
-                        <line x1="82" y1="82" x2="82" y2="76" stroke="#2563eb" stroke-width="1" opacity=".22" />
-                        <line x1="118" y1="82" x2="118" y2="76" stroke="#2563eb" stroke-width="1" opacity=".22" />
-                    </svg>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-type" data-t="pb.bot"></div>
-                    <div class="pc-title" data-t="p5.t"></div>
-                    <p class="pc-desc" data-t="p5.d"></p>
-                    <div class="pc-stack"><span class="ps">Python</span><span class="ps">GPT</span></div>
-                    <span class="pc-soon" data-t="p.soon"></span>
-                </div>
-            </div>
-            <div class="pc reveal" style="transition-delay:.24s">
-                <div class="pc-vis" style="background:#fff7ed">
-                    <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="60" cy="42" r="14" fill="none" stroke="#f97316" stroke-width="1.5" opacity=".45" />
-                        <circle cx="140" cy="42" r="14" fill="none" stroke="#f97316" stroke-width="1.5" opacity=".45" />
-                        <circle cx="100" cy="96" r="14" fill="none" stroke="#f97316" stroke-width="1.5" opacity=".45" />
-                        <circle cx="100" cy="62" r="9" fill="none" stroke="#f97316" stroke-width="1.5" opacity=".35" />
-                        <line x1="74" y1="42" x2="126" y2="42" stroke="#f97316" stroke-width="1" opacity=".28" />
-                        <line x1="65" y1="55" x2="91" y2="56" stroke="#f97316" stroke-width="1" opacity=".28" />
-                        <line x1="135" y1="55" x2="109" y2="56" stroke="#f97316" stroke-width="1" opacity=".28" />
-                        <line x1="99" y1="71" x2="97" y2="82" stroke="#f97316" stroke-width="1" opacity=".28" />
-                    </svg>
-                </div>
-                <div class="pc-body">
-                    <div class="pc-type" data-t="pb.auto"></div>
-                    <div class="pc-title" data-t="p6.t"></div>
-                    <p class="pc-desc" data-t="p6.d"></p>
-                    <div class="pc-stack"><span class="ps">n8n</span><span class="ps">Make</span></div>
-                    <span class="pc-soon" data-t="p.soon"></span>
-                </div>
-            </div>
-        </div>
+        <div class="pgrid" id="pgrid"></div>
     </section>
 
     <section id="contact">
@@ -1018,6 +1055,21 @@
         <span data-t="ft.c"></span>
         <span>&#9795; Jupiter</span>
     </footer>
+
+    <div id="pmodal" class="pm" aria-hidden="true">
+        <div class="pm-box">
+            <button class="pm-x" aria-label="Close">&times;</button>
+            <div class="pm-shot"><img src="" alt="" /></div>
+            <div class="pm-info">
+                <div class="pm-cat"></div>
+                <h3 class="pm-title"></h3>
+                <p class="pm-full"></p>
+                <ul class="pm-feat"></ul>
+                <div class="pm-stack"></div>
+                <a class="pm-open btn-f" target="_blank" rel="noopener" href="#"></a>
+            </div>
+        </div>
+    </div>
 
     <script>
         const T = {
@@ -1038,15 +1090,7 @@
                 's4.t': 'Telegram боты', 's4.d': 'CRM, магазины, уведомления',
                 's5.t': 'Парсинг', 's5.d': 'Данные с любых сайтов',
                 's6.t': 'API & интеграции', 's6.d': 'CRM, платёжки, аналитика',
-                'pr.ey': 'Проекты', 'pr.h': 'Реальные <i>работы</i>', 'pr.note': '3 запущено · 3 в разработке',
-                'pb.game': 'Игра', 'pb.qr': 'QR-открытки', 'pb.crm': 'CRM', 'pb.dash': 'Дашборд', 'pb.bot': 'AI Бот', 'pb.auto': 'Автоматизация',
-                'p1.d': 'Бизнес-игра для прокачки навыков финансиста.',
-                'p2.d': 'QR-открытки для цветочных и подарочных магазинов.',
-                'p3.d': 'CRM для хостела с TG-ботом и бронированиями.',
-                'p4.t': 'Analytics Dashboard', 'p4.d': 'Аналитика и живые данные для бизнеса.',
-                'p5.t': 'AI Sales Bot', 'p5.d': 'GPT-бот для автоматизации продаж.',
-                'p6.t': 'Workflow Engine', 'p6.d': 'Автоматизация маркетинга без участия человека.',
-                'p.open': 'Открыть →', 'p.soon': 'Скоро на домене',
+                'pr.ey': 'Проекты', 'pr.h': 'Реальные <i>работы</i>', 'pr.note': '10 проектов · все вживую',
                 'ct.ey': 'Контакт',
                 'ct.h': 'Есть задача?<i>Давай сделаем.</i>',
                 'ct.sub': 'Отвечаю быстро. Погружаюсь глубоко.',
@@ -1069,15 +1113,7 @@
                 's4.t': 'Telegram bots', 's4.d': 'CRM, shops, notifications',
                 's5.t': 'Scraping', 's5.d': 'Data from any website',
                 's6.t': 'API & integrations', 's6.d': 'CRM, payments, analytics',
-                'pr.ey': 'Projects', 'pr.h': 'Real <i>work</i>', 'pr.note': '3 live · 3 in progress',
-                'pb.game': 'Game', 'pb.qr': 'QR Cards', 'pb.crm': 'CRM', 'pb.dash': 'Dashboard', 'pb.bot': 'AI Bot', 'pb.auto': 'Automation',
-                'p1.d': 'Business game for leveling up financial skills.',
-                'p2.d': 'QR card platform for flower and gift shops.',
-                'p3.d': 'CRM for a hostel with TG bot and bookings.',
-                'p4.t': 'Analytics Dashboard', 'p4.d': 'Live analytics and data for business.',
-                'p5.t': 'AI Sales Bot', 'p5.d': 'GPT bot for sales automation.',
-                'p6.t': 'Workflow Engine', 'p6.d': 'Full marketing automation without humans.',
-                'p.open': 'Open →', 'p.soon': 'Coming soon',
+                'pr.ey': 'Projects', 'pr.h': 'Real <i>work</i>', 'pr.note': '10 projects · all live',
                 'ct.ey': 'Contact',
                 'ct.h': 'Got a project?<i>Let\'s build it.</i>',
                 'ct.sub': 'I respond fast. I go deep.',
@@ -1085,12 +1121,220 @@
             }
         };
         let lang = 'ru';
+
+        const PROJECTS = [
+            {
+                bg: '#f2ede1', live: true, shot: 'assets/shots/vento.webp', url: 'https://vento-drab-theta.vercel.app/',
+                title: 'VENTO', stack: ['Menu', 'Web', 'RU · KG · EN'],
+                cat: { ru: 'Ресторан · Меню', en: 'Restaurant · Menu' },
+                short: { ru: 'Сайт-меню ресторана итальянской кухни в Оше.', en: 'Menu site for an Italian restaurant in Osh.' },
+                full: {
+                    ru: 'VENTO — Cucina Italiana: сайт-меню ресторана итальянской кухни в Оше. Атмосферная подача с интро-анимацией и элегантной типографикой, интерактивное меню по категориям — закуски, салаты, паста и ризотто, горячее, гриль, десерты и напитки — с ценами и описаниями блюд. Трёхъязычный интерфейс (рус / кыр / eng).',
+                    en: 'VENTO — Cucina Italiana: a menu website for an Italian restaurant in Osh. An atmospheric intro animation and elegant typography, with an interactive menu by category — antipasti, salads, pasta & risotto, mains, grill, desserts and drinks — including prices and dish descriptions. Trilingual UI (RU / KG / EN).'
+                },
+                feat: {
+                    ru: ['Интерактивное меню по категориям', 'Блюда с ценами и описанием', 'Атмосферное интро и типографика', 'Три языка: рус / кыр / eng'],
+                    en: ['Interactive menu by category', 'Dishes with prices and descriptions', 'Atmospheric intro and typography', 'Three languages: RU / KG / EN']
+                }
+            },
+            {
+                bg: '#eef7f0', live: true, shot: 'assets/shots/poligrafiya.webp', url: 'https://p0ligrafya.com/',
+                title: 'poligrafiya', stack: ['CRM', 'ERP', 'Kanban'],
+                cat: { ru: 'CRM / ERP', en: 'CRM / ERP' },
+                short: { ru: 'CRM/ERP для типографий: от заявки до оплаты в одном окне.', en: 'CRM/ERP for print shops: from request to payment in one window.' },
+                full: {
+                    ru: 'poligrafiya — CRM/ERP-система для типографий и рекламных агентств. Ведёт заказ от заявки до оплаты: приём лидов, канбан-доска производства, склад материалов, финансы и аналитика. Рассчитана на всю команду и сеть филиалов — с ролевым доступом и интерфейсом на трёх языках (рус / кыр / eng).',
+                    en: 'poligrafiya is a CRM/ERP for print shops and ad agencies. It runs an order from request to payment: lead intake, a production kanban board, materials stock, finance and analytics. Built for the whole team and a network of branches, with role-based access and a trilingual UI (RU / KG / EN).'
+                },
+                feat: {
+                    ru: ['Лиды и воронка продаж', 'Канбан заказов по этапам производства', 'Склад материалов, финансы, аналитика', 'Ролевой доступ и мультифилиальность'],
+                    en: ['Leads and sales funnel', 'Order kanban across production stages', 'Materials stock, finance, analytics', 'Role-based access and multi-branch']
+                }
+            },
+            {
+                bg: '#eef2ff', live: true, shot: 'assets/shots/kpioshsu.webp', url: 'https://kpioshsu.com.kg/',
+                title: 'КПЭ ОШГУ', stack: ['KPI', 'Analytics', 'Roles'],
+                cat: { ru: 'Платформа', en: 'Platform' },
+                short: { ru: 'Платформа мониторинга эффективности преподавателей ОшГУ.', en: 'Faculty performance monitoring platform for OshSU.' },
+                full: {
+                    ru: 'Автоматизированная платформа мониторинга и оценки ключевых показателей эффективности (КПЭ) преподавателей Ошского государственного университета. Личный кабинет сотрудника, задачи и планёрки, учёт научных публикаций и расчёт показателей. 8 уровней доступа, круглосуточный онлайн-доступ, часть цифровой экосистемы ОшГУ.',
+                    en: 'An automated platform for monitoring and scoring the key performance indicators (KPI) of Osh State University faculty. Personal cabinet, tasks and briefings, tracking of research publications and metric calculation. 8 access levels, round-the-clock online access, part of the OshSU digital ecosystem.'
+                },
+                feat: {
+                    ru: ['Личный кабинет преподавателя', 'Задачи, планёрки и публикации', 'Автоматический расчёт КПЭ', '8 ролей доступа · онлайн 24/7'],
+                    en: ['Faculty personal cabinet', 'Tasks, briefings and publications', 'Automatic KPI calculation', '8 access roles · online 24/7']
+                }
+            },
+            {
+                bg: '#e7ecf6', live: true, shot: 'assets/shots/autokgs.webp', url: 'https://autokgs.com/',
+                title: 'АвтоДеталь', stack: ['E-commerce', 'VIN', 'Catalog'],
+                cat: { ru: 'Магазин', en: 'Store' },
+                short: { ru: 'Магазин автозапчастей с точным подбором по VIN.', en: 'Auto-parts store with precise VIN lookup.' },
+                full: {
+                    ru: 'АвтоДеталь — интернет-магазин автозапчастей: оригинальные детали и проверенные аналоги для легковых и коммерческих авто. Точный подбор по VIN, каталог из 12 000+ артикулов в наличии, доставка по региону за 1–2 дня и гарантия до 24 месяцев. Отдельный портал для сотрудников (склад).',
+                    en: 'AvtoDetal is an online auto-parts store: original parts and verified analogues for passenger and commercial vehicles. Precise VIN lookup, a catalog of 12,000+ in-stock items, 1–2 day regional delivery and up to 24 months warranty. A separate staff portal (warehouse).'
+                },
+                feat: {
+                    ru: ['Подбор запчастей по VIN', 'Каталог 12 000+ артикулов', 'Доставка 1–2 дня, гарантия 24 мес', 'Портал для сотрудников / склад'],
+                    en: ['Parts lookup by VIN', 'Catalog of 12,000+ items', '1–2 day delivery, 24-mo warranty', 'Staff / warehouse portal']
+                }
+            },
+            {
+                bg: '#eef7f2', live: true, shot: 'assets/shots/elbazar.webp', url: 'https://elbazar.kg/',
+                title: 'ElBazar', stack: ['E-commerce', 'Fashion', 'Catalog'],
+                cat: { ru: 'Магазин', en: 'Store' },
+                short: { ru: 'Интернет-магазин одежды для всей семьи (Ош).', en: 'Online clothing store for the whole family (Osh).' },
+                full: {
+                    ru: 'ElBazar — интернет-магазин одежды для всей семьи в Оше. Актуальные сезонные коллекции по честным ценам, каталог с фильтрами, страницы преимуществ и контактов, вход в личный кабинет. Витрина с акциями и рейтингом — 4.9 и 2000+ клиентов.',
+                    en: 'ElBazar is an online clothing store for the whole family in Osh. Current seasonal collections at fair prices, a filterable catalog, features and contact pages, and customer login. A storefront with promos and a 4.9 rating across 2000+ customers.'
+                },
+                feat: {
+                    ru: ['Каталог одежды по коллекциям', 'Сезонные акции и скидки', 'Личный кабинет покупателя', 'Адаптивная витрина'],
+                    en: ['Catalog by collections', 'Seasonal promos and discounts', 'Customer account', 'Responsive storefront']
+                }
+            },
+            {
+                bg: '#eef1f8', live: true, shot: 'assets/shots/expert.webp', url: 'https://expert-game.vercel.app/',
+                title: 'Expert Game', stack: ['Quiz', 'EdTech', 'RU · KG'],
+                cat: { ru: 'Игра', en: 'Game' },
+                short: { ru: 'Квиз по операционному менеджменту и бизнес-процессам.', en: 'Quiz on operations management and business processes.' },
+                full: {
+                    ru: '«Кто Эксперт?» — обучающая викторина по экономике бизнеса и менеджменту: операционный менеджмент, бизнес-процессы, управление персоналом и качество сервиса. 30 вопросов, до 3000 очков, выбор категорий и режима, двуязычный интерфейс (рус / кыр).',
+                    en: '“Who is the Expert?” is a learning quiz on business economics and management: operations management, business processes, HR and service quality. 30 questions, up to 3000 points, category and mode selection, bilingual UI (RU / KG).'
+                },
+                feat: {
+                    ru: ['30 вопросов, до 3000 очков', 'Темы: операции, процессы, персонал, сервис', 'Выбор категорий и режима', 'Русский и кыргызский'],
+                    en: ['30 questions, up to 3000 points', 'Topics: operations, processes, HR, service', 'Category and mode selection', 'Russian and Kyrgyz']
+                }
+            },
+            {
+                bg: '#ebe9f5', live: true, shot: 'assets/shots/pdd.webp', url: 'https://pdd-kids.vercel.app/',
+                title: 'Знаток дорог', stack: ['Quiz', 'Kids', 'RU · KG'],
+                cat: { ru: 'Игра · ПДД', en: 'Game · Road rules' },
+                short: { ru: 'Игра-квиз по ПДД для детей Кыргызстана.', en: 'Road-rules quiz game for kids in Kyrgyzstan.' },
+                full: {
+                    ru: '«Знаток дорог» — интерактивная игра-квиз по правилам дорожного движения для детей Кыргызстана. 25 вопросов, система очков и комбо, весёлое оформление в космической теме. Двуязычный интерфейс — русский и кыргызский.',
+                    en: '“Road Expert” is an interactive road-rules quiz game for kids in Kyrgyzstan. 25 questions, a points-and-combo system and a playful space theme. Bilingual — Russian and Kyrgyz.'
+                },
+                feat: {
+                    ru: ['25 вопросов по ПДД', 'Очки и комбо', 'Игровое оформление', 'Русский и кыргызский'],
+                    en: ['25 road-rule questions', 'Points and combos', 'Playful game design', 'Russian and Kyrgyz']
+                }
+            },
+            {
+                bg: '#e6efe8', live: true, shot: 'assets/shots/konoq.webp', url: 'https://konoq-hostel.com/',
+                title: 'Konoq Hostel', stack: ['CRM', 'Booking', 'TG Bot'],
+                cat: { ru: 'CRM · Отель', en: 'CRM · Hotel' },
+                short: { ru: 'Сайт бронирования отеля + CRM с Telegram-ботом.', en: 'Hotel booking site + CRM with a Telegram bot.' },
+                full: {
+                    ru: 'KonoQ — отель / мотель в Оше: гостевой сайт с выбором филиала и доступных номеров и админ-CRM с бронированиями и Telegram-ботом для уведомлений. У каждого филиала своё оформление и набор комнат.',
+                    en: 'KonoQ is a hotel / motel in Osh: a guest site with branch and room selection, plus an admin CRM with bookings and a Telegram bot for notifications. Each branch has its own look and set of rooms.'
+                },
+                feat: {
+                    ru: ['Выбор филиала и номеров', 'Онлайн-бронирование', 'CRM для управления бронями', 'Telegram-бот уведомлений'],
+                    en: ['Branch and room selection', 'Online booking', 'CRM to manage reservations', 'Telegram notification bot']
+                }
+            },
+            {
+                bg: '#f1f3f6', live: true, shot: 'assets/shots/loko.webp', url: 'https://lokobooking.com/',
+                title: 'Loko Express', stack: ['ERP', 'Booking', 'Roles'],
+                cat: { ru: 'ERP', en: 'ERP' },
+                short: { ru: 'ERP-система для бронирований и операций.', en: 'ERP system for bookings and operations.' },
+                full: {
+                    ru: 'Loko Express — ERP-система для управления бронированиями и операционными процессами: вход в кабинет по ролям, ведение заявок и внутренних процессов компании. Внутренняя система — публично доступен экран входа.',
+                    en: 'Loko Express is an ERP for managing bookings and internal operations: role-based cabinet login, handling of requests and internal workflows. An internal system — the login screen is publicly reachable.'
+                },
+                feat: {
+                    ru: ['Кабинет с ролевым доступом', 'Управление бронированиями', 'Операционные процессы', 'Внутренняя ERP-система'],
+                    en: ['Role-based cabinet', 'Booking management', 'Operational workflows', 'Internal ERP system']
+                }
+            },
+            {
+                bg: '#f6f6f8', live: true, shot: 'assets/shots/lovelet.webp', url: 'https://up1mep-lovelet.vercel.app/admin',
+                title: 'LoveLet', stack: ['QR', 'Retail', 'Cards'],
+                cat: { ru: 'QR-сервис', en: 'QR service' },
+                short: { ru: 'QR-открытки для цветочных и подарочных магазинов.', en: 'QR cards for flower and gift shops.' },
+                full: {
+                    ru: 'LoveLet (QR Открытка) — сервис QR-открыток для цветочных и подарочных магазинов: кабинет кассира, создание открытки с текстом и медиа и генерация QR-кода для вложения в букет или подарок. Публично доступен экран входа с демо-доступом.',
+                    en: 'LoveLet (QR Card) is a QR-greeting-card service for flower and gift shops: a cashier cabinet, card creation with text and media, and QR-code generation to tuck into a bouquet or gift. The login screen with demo access is publicly reachable.'
+                },
+                feat: {
+                    ru: ['Кабинет кассира магазина', 'Создание QR-открытки', 'Текст и медиа в открытке', 'Демо-доступ'],
+                    en: ['Store cashier cabinet', 'QR card creation', 'Text and media in a card', 'Demo access']
+                }
+            }
+        ];
+
+        function renderProjects() {
+            const g = document.getElementById('pgrid');
+            g.innerHTML = PROJECTS.map((p, i) =>
+                '<div class="pc reveal" data-p="' + i + '" style="transition-delay:' + ((i % 3) * 0.08) + 's">' +
+                '<div class="pc-vis" style="background:' + p.bg + '">' +
+                (p.live ? '<div class="live-dot"></div>' : '') +
+                '<div class="pc-frame"><div class="pc-bar"><span></span><span></span><span></span></div>' +
+                '<img class="pc-shot" src="' + p.shot + '" alt="' + p.title + '" loading="lazy" /></div>' +
+                '</div>' +
+                '<div class="pc-body">' +
+                '<div class="pc-type" data-cat></div>' +
+                '<div class="pc-title">' + p.title + '</div>' +
+                '<p class="pc-desc" data-short></p>' +
+                '<div class="pc-stack">' + p.stack.map(s => '<span class="ps">' + s + '</span>').join('') + '</div>' +
+                '<span class="pc-link" data-more></span>' +
+                '</div>' +
+                '</div>').join('');
+            g.querySelectorAll('.pc').forEach(c => c.addEventListener('click', () => openModal(+c.dataset.p)));
+        }
+
+        function fillCards(l) {
+            document.querySelectorAll('#pgrid .pc').forEach(c => {
+                const p = PROJECTS[+c.dataset.p];
+                c.querySelector('[data-cat]').textContent = p.cat[l];
+                c.querySelector('[data-short]').textContent = p.short[l];
+                c.querySelector('[data-more]').textContent = (l === 'ru' ? 'Подробнее →' : 'Details →');
+            });
+        }
+
+        let modalIdx = null;
+        function fillModal(i, l) {
+            const p = PROJECTS[i], q = document.getElementById('pmodal');
+            const img = q.querySelector('.pm-shot img');
+            img.src = p.shot; img.alt = p.title;
+            q.querySelector('.pm-cat').textContent = p.cat[l];
+            q.querySelector('.pm-title').textContent = p.title;
+            q.querySelector('.pm-full').textContent = p.full[l];
+            q.querySelector('.pm-feat').innerHTML = p.feat[l].map(f => '<li>' + f + '</li>').join('');
+            q.querySelector('.pm-stack').innerHTML = p.stack.map(s => '<span class="ps">' + s + '</span>').join('');
+            const a = q.querySelector('.pm-open');
+            a.href = p.url; a.textContent = (l === 'ru' ? 'Открыть сайт ↗' : 'Visit site ↗');
+        }
+        function openModal(i) {
+            modalIdx = i; fillModal(i, lang);
+            document.getElementById('pmodal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            modalIdx = null;
+            document.getElementById('pmodal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function wireModal() {
+            const q = document.getElementById('pmodal');
+            q.addEventListener('click', e => { if (e.target === q) closeModal(); });
+            q.querySelector('.pm-x').addEventListener('click', closeModal);
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+        }
+
         function setLang(l) {
             lang = l;
             document.getElementById('bru').classList.toggle('on', l === 'ru');
             document.getElementById('ben').classList.toggle('on', l === 'en');
             document.querySelectorAll('[data-t]').forEach(el => { const v = T[l][el.dataset.t]; if (v !== undefined) el.innerHTML = v; });
+            fillCards(l);
+            if (modalIdx !== null) fillModal(modalIdx, l);
         }
+
+        renderProjects();
+        wireModal();
         setLang('ru');
 
         function tick() {
