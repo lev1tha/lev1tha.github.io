@@ -1,0 +1,43 @@
+name: CI
+
+# The site itself is published by GitHub Pages straight from the master branch
+# ("pages build and deployment"), so there is no deploy job here.
+
+on:
+  push:
+    paths-ignore: ['**/*.md', 'docs/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
+
+jobs:
+  site:
+    name: Static site checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check local links and assets (offline)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # --root-dir resolves root-relative links (/assets/...) against the repo root.
+          args: --offline --no-progress --root-dir ${{ github.workspace }} './**/*.html'
+          # A page with only external links is fine; don't fail on "0 links".
+          failIfEmpty: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Syntax-check standalone JS files
+        run: |
+          if [ -z "$(git ls-files -- '*.js' '*.mjs')" ]; then
+            echo "No standalone .js files to check."
+            exit 0
+          fi
+          git ls-files -z -- '*.js' '*.mjs' | xargs -0 -n1 -t node --check
